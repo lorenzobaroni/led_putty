@@ -48,8 +48,9 @@ int main() {
     while (true) {
         printf("Digite um comando: ");
         if (fgets(input, sizeof(input), stdin)) {
-            
+
     }
     return 0;
+    }
 }
-}
+
