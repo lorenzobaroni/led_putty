@@ -20,7 +20,26 @@ void init_gpio() {
 }
 
 // Função para desligar todos os LEDs e o Buzzer
+void all_off() {
+    gpio_put(LED_GREEN, 0);
+    gpio_put(LED_BLUE, 0);
+    gpio_put(LED_RED, 0);
+    gpio_put(BUZZER, 0);
+}
 
+// Função para gerar tons no buzzer
+void tone(uint buzzer, uint frequencia, uint duracao) {
+    uint32_t periodo = 1000000 / frequencia; 
+    uint32_t meio_periodo = periodo / 2;
+    uint32_t ciclos = frequencia * duracao / 1000;
+
+    for (uint32_t i = 0; i < ciclos; i++) {
+        gpio_put(buzzer, 1); 
+        sleep_us(meio_periodo);
+        gpio_put(buzzer, 0); 
+        sleep_us(meio_periodo);
+    }
+}
 
 int main() {
     stdio_init_all();
@@ -34,3 +53,4 @@ int main() {
     return 0;
     }
 }
+
