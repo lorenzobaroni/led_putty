@@ -85,5 +85,6 @@ int main() {
                 printf("Comando desconhecido: %s\n", input);
             }
         }
+        
     return 0;
 }
