@@ -49,30 +49,27 @@ int main() {
     char input[20];
 
     while (true) {
-        printf("Digite um comando: ");
-        if (fgets(input, sizeof(input), stdin)) {
-            // Remove o caractere de nova linha, se presente
-            input[strcspn(input, "\n")] = 0;
+        scanf("%s", input);
 
-            if (strcmp(input, "vermelho") == 0) {
+            if (strcmp(input, "RED") == 0) {
                 all_off();
                 gpio_put(LED_RED, 1);
                 printf("ON: RED\n");
-            } else if (strcmp(input, "azul") == 0) {
+            } else if (strcmp(input, "BLUE") == 0) {
                 all_off();
                 gpio_put(LED_BLUE, 1);
                 printf("ON: BLUE\n");
-            } else if (strcmp(input, "verde") == 0) {
+            } else if (strcmp(input, "GREEN") == 0) {
                 all_off();
                 gpio_put(LED_GREEN, 1);
                 printf("ON: GREEN\n");
-            } else if (strcmp(input, "branco") == 0) {
+            } else if (strcmp(input, "WHITE") == 0) {
                 all_off();
                 gpio_put(LED_RED, 1);
                 gpio_put(LED_GREEN, 1);
                 gpio_put(LED_BLUE, 1);
                 printf("ON: WHITE\n");
-            } else if (strcmp(input, "buzzer") == 0) {
+            } else if (strcmp(input, "BUZZER") == 0) {
                 all_off();
                 printf("ON: BUZZER\n");
                 tone(BUZZER, 200, 500);
@@ -83,7 +80,5 @@ int main() {
                 printf("Comando desconhecido: %s\n", input);
             }
         }
-    }
-
     return 0;
 }
