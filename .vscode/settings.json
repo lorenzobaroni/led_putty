@@ -39,6 +39,7 @@
     "files.associations": {
         "string.h": "c",
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "bootrom.h": "c"
     }
 }

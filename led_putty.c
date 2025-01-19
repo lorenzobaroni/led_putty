@@ -1,4 +1,5 @@
 #include "pico/stdlib.h"
+#include "pico/bootrom.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -72,10 +73,14 @@ int main() {
             } else if (strcmp(input, "BUZZER") == 0) {
                 all_off();
                 printf("ON: BUZZER\n");
-                tone(BUZZER, 200, 500);
+                tone(BUZZER, 200, 2000);
             } else if (strcmp(input, "OFF") == 0) {
                 all_off();
                 printf("SYSTEM: OFF\n");
+            } else if (strcmp(input, "REBOOT") == 0) {
+                printf("RHABILITANDO O MODO GRAVAÇÃO\n");
+                sleep_ms(100); 
+                reset_usb_boot(0, 0);
             } else {
                 printf("Comando desconhecido: %s\n", input);
             }
