@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include <string.h>
 
 // Definição dos pinos para os LEDs e Buzzer
 #define LED_GREEN 11
@@ -23,7 +24,9 @@ int main() {
     init_gpio();
 
     while (true) {
-
+        printf("Digite um comando: ");
+        if (fgets(input, sizeof(input), stdin)) {
+            
     }
     return 0;
 }
