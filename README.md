@@ -4,7 +4,7 @@ Este projeto implementa um sistema de controle para LEDs RGB (vermelho, azul e v
 
 ## Link do Vídeo Ensaio
 
-[Demonstração de Funcionamento do Projeto]()
+[Demonstração de Funcionamento do Projeto](https://www.youtube.com/watch?v=MYEgqEFYRBc)
 
 ## 🛠️ Funcionalidades
 
