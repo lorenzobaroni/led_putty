@@ -19,6 +19,17 @@ void init_gpio() {
     gpio_set_dir(BUZZER, GPIO_OUT);
 }
 
+// Função para inicializar os pinos GPIO
+void init_gpio() {
+    const int leds[] = {LED_RED, LED_GREEN, LED_BLUE};
+    for (int i = 0; i < 3; i++) {
+        gpio_init(leds[i]);
+        gpio_set_dir(leds[i], GPIO_OUT);
+    }
+    gpio_init(BUZZER);
+    gpio_set_dir(BUZZER, GPIO_OUT);
+}
+
 int main() {
     stdio_init_all();
     init_gpio();
