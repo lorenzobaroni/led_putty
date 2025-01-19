@@ -78,7 +78,7 @@ int main() {
                 all_off();
                 printf("SYSTEM: OFF\n");
             } else if (strcmp(input, "REBOOT") == 0) {
-                printf("RHABILITANDO O MODO GRAVAÇÃO\n");
+                printf("HABILITANDO O MODO GRAVAÇÃO\n");
                 sleep_ms(100); 
                 reset_usb_boot(0, 0);
             } else {
